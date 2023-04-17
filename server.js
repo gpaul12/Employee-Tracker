@@ -323,3 +323,14 @@ function removeEmployee(id) {
 
   byEmployees();
 }
+
+function updateByRole(employeeId, roleId) {
+  var byRole = connection.query(
+    "UPDATE employee SET role_id = ? WHERE id = ?",
+    [roleId, employeeId],
+    function (error, role) {
+      if (error) throw error;
+    }
+  );
+  byDepartment();
+}
