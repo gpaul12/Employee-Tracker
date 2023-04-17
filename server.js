@@ -60,3 +60,16 @@ function runSearch() {
                     byManager();
                     runSearch();
                     break;
+                    case "Add employee":
+                    inquirer
+                        .prompt([
+                            {
+                                name: "employeeFirst",
+                                type: "input",
+                                message: "What is the employee's first name?",
+                                validate: answer => {
+                                    if (answer !== "") {
+                                        return true;
+                                    }
+                                    return "Please enter at least one character.";
+                                }
