@@ -46,3 +46,4 @@ function runSearch() {
                 "Update employee role",
                 "Update employee manager"
             ]
+        }).then(answers => {
