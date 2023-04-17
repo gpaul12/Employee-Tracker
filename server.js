@@ -101,3 +101,22 @@ function runSearch() {
                             runSearch();
                         })
                     break;
+                case "Add Department":
+                    inquirer
+                        .prompt([
+                            {
+                                name: "Department",
+                                type: "input",
+                                message: "Please enter the department you would like to add?",
+                                validate: answer => {
+                                    if (answer !== "") {
+                                        return true;
+                                    }
+                                    return "Please enter at least one character.";
+                                }
+                            },
+                        ]).then(answers => {
+                            addDepartment(answers.Department);
+                            runSearch();
+                        })
+                    break;
