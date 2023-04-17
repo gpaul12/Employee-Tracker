@@ -96,3 +96,8 @@ function runSearch() {
                                 type: "input",
                                 message: "Please enter manager id",
                             }
+                        ]).then(answers => {
+                            addEmployee(answers.employeeFirst, answers.employeeLast, answers.department, answers.manager);
+                            runSearch();
+                        })
+                    break;
