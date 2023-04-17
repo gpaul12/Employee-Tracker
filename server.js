@@ -120,3 +120,32 @@ function runSearch() {
                             runSearch();
                         })
                     break;
+                case "Add Role":
+                    inquirer
+                        .prompt([
+                            {
+                                name: "title",
+                                type: "input",
+                                message: "Please enter the role's title.",
+                                validate: answer => {
+                                    if (answer !== "") {
+                                        return true;
+                                    }
+                                    return "Please enter at least one character.";
+                                }
+                            },
+                            {
+                                name: "salary",
+                                type: "input",
+                                message: "Please enter the role's salary.",
+                            },
+                            {
+                                name: "department_id",
+                                type: "input",
+                                message: "Please enter the department id.",
+                            }
+                        ]).then(answers => {
+                            addRole(answers.title, answers.salary, answers.department_id);
+                            runSearch();
+                        })
+                    break;
