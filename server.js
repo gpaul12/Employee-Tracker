@@ -277,3 +277,15 @@ function departmentTable() {
     }
   );
 }
+
+function addDepartment(department) {
+  var department = connection.query(
+    "INSERT INTO department SET d_name = ?",
+    [department],
+    function (error, department) {
+      if (error) throw error;
+    }
+  );
+
+  departmentTable();
+}
