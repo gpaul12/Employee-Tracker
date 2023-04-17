@@ -255,3 +255,15 @@ function updateByManager(managerId, employeeId) {
 
   byManager();
 }
+
+function addEmployee(employeeFirst, employeeLast, department, manager) {
+  var add = connection.query(
+    "INSERT INTO employee SET first_name = ?, last_name = ?, role_id = ?, manager_id = ?",
+    [employeeFirst, employeeLast, department, manager],
+    function (error, add) {
+      if (error) throw error;
+    }
+  );
+
+  byEmployees();
+}
