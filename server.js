@@ -162,4 +162,21 @@ function runSearch() {
                                 runSearch();
                             })
                         break;
-    
+                    case "Update employee role":
+                        inquirer
+                            .prompt([
+                                {
+                                    name: "employeeId",
+                                    type: "input",
+                                    message: "Please enter employee's id",
+                                },
+                                {
+                                    name: "roleId",
+                                    type: "input",
+                                    message: "Please enter role's id",
+                                }
+                            ]).then(answers => {
+                                updateByRole(answers.employeeId, answers.roleId);
+                                runSearch();
+                            })
+                        break;
