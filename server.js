@@ -149,3 +149,17 @@ function runSearch() {
                             runSearch();
                         })
                     break;
+                case "Remove employee":
+                        inquirer
+                            .prompt([
+                                {
+                                    name: "id",
+                                    type: "input",
+                                    message: "Please enter the Employee id",
+                                }
+                            ]).then(answers => {
+                                removeEmployee(answers.id);
+                                runSearch();
+                            })
+                        break;
+    
