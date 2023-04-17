@@ -52,3 +52,9 @@ function runSearch() {
                     byEmployees();
                     runSearch();
                     break;
+                case "View all employees by department":
+
+                    byDepartment();
+                    runSearch();
+
+                    break;
