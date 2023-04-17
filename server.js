@@ -73,3 +73,14 @@ function runSearch() {
                                     }
                                     return "Please enter at least one character.";
                                 }
+                            },
+                            {
+                                name: "employeeLast",
+                                type: "input",
+                                message: "What is the employee's last name?",
+                                validate: answer => {
+                                    if (answer !== "") {
+                                        return true;
+                                    }
+                                    return "Please enter at least one character.";
+                                }
