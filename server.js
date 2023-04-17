@@ -289,3 +289,13 @@ function addDepartment(department) {
 
   departmentTable();
 }
+
+function roleTable() {
+  var roleT = connection.query(
+    "SELECT title, salary, department_id FROM role;",
+    function (error, roleT) {
+      if (error) throw error;
+      console.table(roleT);
+    }
+  );
+}
