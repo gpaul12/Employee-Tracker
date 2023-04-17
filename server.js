@@ -56,3 +56,7 @@ function runSearch() {
                     byDepartment();
                     runSearch();
                     break;
+                case "View all employees by manager":
+                    byManager();
+                    runSearch();
+                    break;
