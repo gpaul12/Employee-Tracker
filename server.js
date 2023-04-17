@@ -47,4 +47,4 @@ function runSearch() {
                 "Update employee manager"
             ]
         }).then(answers => {
-            switch (answers.action) {
+            switch (answers.action) 
