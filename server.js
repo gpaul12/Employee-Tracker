@@ -311,3 +311,15 @@ function addRole(title, salary, department_id) {
 
   roleTable();
 }
+
+function removeEmployee(id) {
+  var add = connection.query(
+    "DELETE FROM employee WHERE id = ?",
+    [id],
+    function (error, id) {
+      if (error) throw error;
+    }
+  );
+
+  byEmployees();
+}
