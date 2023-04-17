@@ -267,3 +267,13 @@ function addEmployee(employeeFirst, employeeLast, department, manager) {
 
   byEmployees();
 }
+
+function departmentTable() {
+  var depTable = connection.query(
+    "SELECT d_name FROM department;",
+    function (error, depTable) {
+      if (error) throw error;
+      console.table(depTable);
+    }
+  );
+}
