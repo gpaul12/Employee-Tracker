@@ -15,3 +15,14 @@ const connection = mysql.createConnection({
   password: "12345",
   database: "employee_tracker",
 });
+
+connection.connect((err) => {
+  if (err) {
+    console.log(err);
+    res.status(500);
+    return res.send("There was an error connecting to the database.");
+  }
+  console.log("You're connected!");
+
+  runSearch();
+});
