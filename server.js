@@ -49,3 +49,6 @@ function runSearch() {
         }).then(answers => {
             switch (answers.action) {
                 case "View all employees":
+                    byEmployees();
+                    runSearch();
+                    break;
