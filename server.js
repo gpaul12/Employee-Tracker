@@ -28,3 +28,21 @@ connection.connect((err) => {
 });
 
 connection.query = util.promisify(connection.query);
+
+function runSearch() {
+    inquirer
+        .prompt({
+            name: "action",
+            type: "list",
+            message: "What would you like to do?",
+            choices: [
+                "View all employees",
+                "View all employees by department",
+                "View all employees by manager",
+                "Add employee",
+                "Add Department",
+                "Add Role",
+                "Remove employee",
+                "Update employee role",
+                "Update employee manager"
+            ]
