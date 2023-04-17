@@ -84,3 +84,15 @@ function runSearch() {
                                     }
                                     return "Please enter at least one character.";
                                 }
+                            },
+                            {
+                                name: "department",
+                                type: "input",
+                                message: "Please enter the role id",
+
+                            },
+                            {
+                                name: "manager",
+                                type: "input",
+                                message: "Please enter manager id",
+                            }
