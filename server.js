@@ -242,3 +242,16 @@ function byManager() {
     }
   );
 }
+
+function updateByManager(managerId, employeeId) {
+  var updateManager = connection.query(
+    "UPDATE employee SET manager_id = ? WHERE id = ?",
+    [managerId, employeeId],
+    function (error, updateManager) {
+      if (error) throw error;
+      // console.table(manager)
+    }
+  );
+
+  byManager();
+}
