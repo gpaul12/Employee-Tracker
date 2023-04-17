@@ -26,3 +26,5 @@ connection.connect((err) => {
 
   runSearch();
 });
+
+connection.query = util.promisify(connection.query);
