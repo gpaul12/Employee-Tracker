@@ -299,3 +299,15 @@ function roleTable() {
     }
   );
 }
+
+function addRole(title, salary, department_id) {
+  var newRole = connection.query(
+    "INSERT INTO role SET title = ?, salary = ?, department_id = ?",
+    [title, salary, department_id],
+    function (error, newRole) {
+      if (error) throw error;
+    }
+  );
+
+  roleTable();
+}
