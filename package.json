@@ -4,24 +4,25 @@
     "description": "Homework-11 Employee Tracker",
     "main": "server.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "node server.js"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/gpaul12/Employee-Tracker.git"
+        "type": "git",
+        "url": "git+https://github.com/gpaul12/Employee-Tracker.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/gpaul12/Employee-Tracker/issues"
+        "url": "https://github.com/gpaul12/Employee-Tracker/issues"
     },
     "homepage": "https://github.com/gpaul12/Employee-Tracker#readme",
     "dependencies": {
-      "asciiart-logo": "^0.2.6",
-      "console.table": "^0.10.0",
-      "inquirer": "^7.0.1",
-      "mysql": "^2.17.1"
+        "asciiart-logo": "^0.2.6",
+        "console.table": "^0.10.0",
+        "inquirer": "^7.0.1",
+        "mysql": "^2.17.1",
+        "mysql2": "^3.2.3"
     }
-  }
+}
